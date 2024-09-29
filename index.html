@@ -15,7 +15,7 @@
 
       <div class="date-div">
         <div class="sub-container">
-          <p class="title">24</p>
+          <p class="title" id="year"></p>
           <p class="description">Years</p>
         </div>
         <div class="sub-container">
@@ -28,5 +28,15 @@
         </div>
       </div>
     </div>
+
+    <script>
+      function getAge(input) {
+        var input = document.getElementById("input").value;
+        var year = document.getElementById("year");
+        var today = new Date();
+        var birthDate = new Date(input);
+        var age = today.getFullYear() - birthDate.getFullYear();
+      }
+    </script>
   </body>
 </html>
